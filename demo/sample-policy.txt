@@ -1,0 +1,60 @@
+# Sample Company Privacy & Data Policy
+## TechStart India Pvt. Ltd. — Internal Policy Document v1.2
+
+### 1. Introduction
+TechStart India Pvt. Ltd. ("the Company") is a B2C SaaS platform serving customers in India, the European Union, and the United States. We operate an e-commerce analytics platform that processes data for retail businesses.
+
+### 2. Data We Collect
+We collect the following types of data from end users:
+- Full name and email address
+- Billing address and payment card details (last 4 digits only; full card processed by Stripe)
+- Usage telemetry and behavioral analytics data
+- IP address and device fingerprint
+- Purchase history and transaction data
+
+We also collect data from our business clients (B2B):
+- Company name, address, and GST number
+- Contact person details
+- API usage logs
+
+### 3. How We Use Data
+User data is used for:
+- Providing the analytics service
+- Sending product update emails and marketing communications
+- Improving our machine learning recommendation models
+- Sharing aggregated, anonymized data with our advertising partners
+
+### 4. Data Storage
+All data is stored on AWS S3 (Mumbai region) and replicated to AWS S3 (Ireland region) for redundancy.
+Our database is hosted on AWS RDS PostgreSQL.
+We use Google Analytics and Mixpanel for behavioral tracking.
+We use Intercom for customer support chat.
+
+### 5. Data Retention
+We retain user data for as long as the account is active. Upon account deletion, data may be retained for up to 3 years for legal and audit purposes.
+
+### 6. Third Party Sharing
+We share data with:
+- Stripe (payment processing)
+- Google Analytics (behavioral analytics)
+- Mixpanel (product analytics)
+- Intercom (customer support)
+- AWS (infrastructure)
+- Our advertising partners (anonymized behavioral data)
+
+### 7. Security
+We use HTTPS for all data in transit.
+Passwords are hashed using bcrypt.
+We conduct annual security reviews.
+Employee access to production data is unrestricted by role.
+
+### 8. User Rights
+Users may contact support@techstart.in to request data deletion. We will respond within 60 days.
+
+### 9. Cookies
+We use functional, analytics, and advertising cookies. Users are shown a cookie banner on first visit.
+
+### 10. Updates to This Policy
+We may update this policy at any time. Continued use of the platform constitutes acceptance.
+
+Last updated: January 2026

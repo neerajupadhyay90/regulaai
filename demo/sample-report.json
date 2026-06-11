@@ -1,0 +1,140 @@
+{
+  "reportId": "demo-12345678",
+  "regulation": "GDPR",
+  "overallScore": 38,
+  "summary": "The organization processes personal data of EU users but has multiple critical GDPR violations including missing lawful basis documentation, inadequate data retention policies, and no appointed Data Protection Officer. Immediate remediation is required to avoid regulatory enforcement action.",
+  "stats": {
+    "critical": 3,
+    "high": 2,
+    "medium": 2,
+    "low": 1,
+    "passed": 2
+  },
+  "findings": [
+    {
+      "clauseId": "Art.37",
+      "clauseTitle": "Data Protection Officer",
+      "severity": "critical",
+      "title": "No Data Protection Officer appointed",
+      "description": "The company processes EU user data at scale for commercial purposes and uses behavioral tracking across multiple third-party tools. This triggers the mandatory DPO requirement under Art. 37(1)(b). No DPO has been appointed, which is a direct GDPR violation carrying fines up to €10M or 2% of global turnover.",
+      "fineExposure": "Up to €10,000,000 or 2% of global annual turnover",
+      "action": "Appoint a qualified Data Protection Officer internally or via an external DPO service provider. Register the DPO with your lead supervisory authority (in India operating with EU data, typically the Irish DPC).",
+      "deadline": "Immediate"
+    },
+    {
+      "clauseId": "Art.6",
+      "clauseTitle": "Lawful basis for processing",
+      "severity": "critical",
+      "title": "No documented lawful basis for data sharing with ad partners",
+      "description": "The policy states behavioral data is shared with advertising partners but does not identify a lawful basis (consent, legitimate interest, contract, etc.) for this processing. Sharing personal data with ad partners without explicit consent or a documented legitimate interest assessment violates Art. 6 and Art. 9.",
+      "fineExposure": "Up to €20,000,000 or 4% of global annual turnover",
+      "action": "Either obtain explicit, granular consent for advertising data sharing before data collection, or conduct and document a Legitimate Interest Assessment (LIA). Update privacy notice to clearly state the lawful basis used.",
+      "deadline": "Immediate"
+    },
+    {
+      "clauseId": "Art.5(1)(e)",
+      "clauseTitle": "Storage limitation",
+      "severity": "critical",
+      "title": "Excessive 3-year post-deletion data retention",
+      "description": "Retaining all user data for 3 years after account deletion without specifying a lawful basis violates the storage limitation principle. GDPR requires data to be kept only as long as necessary for its stated purpose. A blanket 3-year retention without legal justification is non-compliant.",
+      "fineExposure": "Up to €20,000,000 or 4% of global annual turnover",
+      "action": "Define specific retention periods per data category based on legal obligations (e.g., financial records 7 years, support logs 1 year). Implement automated deletion schedules and document the retention policy in a Data Retention Register.",
+      "deadline": "Within 30 days"
+    },
+    {
+      "clauseId": "Art.33",
+      "clauseTitle": "Breach notification to supervisory authority",
+      "severity": "high",
+      "title": "No 72-hour breach notification procedure",
+      "description": "The policy contains no mention of a data breach response plan or the obligation to notify supervisory authorities within 72 hours of discovering a breach. This is a required operational control under GDPR Art. 33.",
+      "fineExposure": "Up to €10,000,000 or 2% of global annual turnover",
+      "action": "Create a Data Breach Response Plan that includes: breach detection procedures, internal escalation path, 72-hour notification workflow to the supervisory authority, and template notifications for affected data subjects.",
+      "deadline": "Within 30 days"
+    },
+    {
+      "clauseId": "Art.32",
+      "clauseTitle": "Security of processing",
+      "severity": "high",
+      "title": "Unrestricted employee access to production data",
+      "description": "The policy explicitly states employee access to production data is unrestricted by role. This violates the principle of least privilege and the requirement to implement appropriate technical and organisational security measures under Art. 32.",
+      "fineExposure": "Up to €10,000,000 or 2% of global annual turnover",
+      "action": "Implement Role-Based Access Control (RBAC) on all production systems. Conduct an access audit, revoke unnecessary permissions, and log all production data access. Document access control policy.",
+      "deadline": "Within 30 days"
+    },
+    {
+      "clauseId": "Art.17",
+      "clauseTitle": "Right to erasure",
+      "severity": "medium",
+      "title": "60-day erasure response time exceeds GDPR requirement",
+      "description": "GDPR Art. 17 requires erasure requests to be handled within 30 days (with a possible 60-day extension only in complex cases with notification to the user). The current policy states a flat 60-day response time without exceptions framework.",
+      "fineExposure": "Regulatory warning or fine up to €10,000,000",
+      "action": "Update the data deletion process to respond to erasure requests within 30 days as standard. Document the process for requesting a 60-day extension and train support staff on the correct procedure.",
+      "deadline": "Within 90 days"
+    },
+    {
+      "clauseId": "Art.13",
+      "clauseTitle": "Information to be provided",
+      "severity": "medium",
+      "title": "Privacy notice missing mandatory GDPR disclosures",
+      "description": "The privacy policy does not disclose: the identity of the data controller's EU representative, specific retention periods per data category, the right to lodge a complaint with a supervisory authority, or the legal basis for each processing activity. These are mandatory under Art. 13.",
+      "fineExposure": "Up to €10,000,000 or 2% of global annual turnover",
+      "action": "Rewrite the privacy notice to include all Art. 13 mandatory elements. Use a layered notice format: short notice at point of collection, full notice linked. Have a GDPR lawyer review before publishing.",
+      "deadline": "Within 90 days"
+    },
+    {
+      "clauseId": "Art.7",
+      "clauseTitle": "Conditions for consent",
+      "severity": "low",
+      "title": "Cookie consent mechanism needs upgrade",
+      "description": "The policy mentions a cookie banner but does not specify that consent is obtained before non-essential cookies are set, or that granular choice is provided per cookie category. Pre-ticked boxes or implied consent banners are not GDPR compliant.",
+      "fineExposure": "Regulatory warning likely; minor fine possible",
+      "action": "Implement a Consent Management Platform (CMP) such as Cookiebot, OneTrust, or Usercentrics. Ensure no non-essential cookies fire before explicit consent is given. Provide category-level opt-in controls.",
+      "deadline": "Within 6 months"
+    }
+  ],
+  "actionPlan": [
+    {
+      "priority": 1,
+      "title": "Appoint a Data Protection Officer",
+      "detail": "Engage an external DPO service (budget ~€500–2000/month) or recruit internally. Register with your lead supervisory authority. The DPO must be independent and report directly to leadership.",
+      "deadline": "Immediate",
+      "clauseRef": "Art.37"
+    },
+    {
+      "priority": 2,
+      "title": "Fix advertising data sharing — get consent or stop",
+      "detail": "Audit every third-party advertising partner. For each: either build a consent flow that captures explicit opt-in before data sharing, or stop sharing. Document the legal basis in a Record of Processing Activities (RoPA).",
+      "deadline": "Immediate",
+      "clauseRef": "Art.6"
+    },
+    {
+      "priority": 3,
+      "title": "Implement Role-Based Access Control on production",
+      "detail": "Conduct an access audit within 1 week. Revoke all unnecessary production access. Implement RBAC using AWS IAM policies. Log all production data access in CloudTrail. Complete within 30 days.",
+      "deadline": "Within 30 days",
+      "clauseRef": "Art.32"
+    },
+    {
+      "priority": 4,
+      "title": "Build and test a Data Breach Response Plan",
+      "detail": "Write a breach response runbook: detection → assessment → 72hr authority notification → subject notification. Run a tabletop exercise with the team. Store the plan somewhere accessible (Notion, Confluence).",
+      "deadline": "Within 30 days",
+      "clauseRef": "Art.33"
+    },
+    {
+      "priority": 5,
+      "title": "Rewrite privacy notice and implement CMP",
+      "detail": "Engage a GDPR lawyer for a privacy notice review (€1000–3000 one-time). Integrate a Consent Management Platform before relaunch. Update data retention schedules per category and publish a retention register.",
+      "deadline": "Within 90 days",
+      "clauseRef": "Art.13"
+    }
+  ],
+  "generatedAt": "2026-06-11T10:30:00.000Z",
+  "companyProfile": {
+    "companyType": "B2C SaaS analytics platform serving EU and Indian users",
+    "dataTypes": ["email", "billing address", "payment info", "behavioral data", "IP address", "purchase history"],
+    "controls": ["HTTPS", "bcrypt passwords", "annual security reviews"],
+    "topics": ["data collection", "third-party sharing", "retention", "user rights", "cookies"],
+    "gaps": ["No DPO", "No breach procedure", "No lawful basis documentation", "No role-based access control"]
+  }
+}
